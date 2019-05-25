@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
+## Dependency Management
+
+Run `npm install` or `npm i` to install the npm dependencies before running the app for the first time.
+
 ## Development server
 
 Run `ng serve --open` or `npm run serve` for a dev server. The app will automatically reload if you change any of the source files.
