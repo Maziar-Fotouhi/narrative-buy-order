@@ -1,0 +1,20 @@
+<header>
+  <div fxFlex fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center">
+    <div fxFlex="20" id="today" class="text-center">
+      <span ng-show="title || false" class="title">{{'general.applicationName' | translate}}</span>
+      <div class="text-left">
+        <button mat-icon-button [matMenuTriggerFor]="matmenu">
+          <mat-icon>language</mat-icon>
+        </button>
+        <mat-menu #matmenu="matMenu">
+          <button mat-menu-item (click)="changeLanguage('en')">
+            <span>English</span>
+          </button>
+          <button mat-menu-item (click)="changeLanguage('es')">
+            <span>Espanol</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,32 @@
+{
+  "general": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "remove": "Remove",
+    "edit": "Edit",
+    "applicationName": "Narrative Buy Order Application POC",
+    "copyright": "Copyright 2019",
+    "error": "Oops! Something went wrong. Please navigate to the dashboard.",
+    "dashboard": "Dashboard",
+    "addNewOrder": "Add New Order",
+    "orderId": "Order ID: "
+  },
+  "extra": {
+    "otherLang": "En Español",
+    "greet1": "Good Morning",
+    "greet2": "Good Afternoon",
+    "greet3": "Good Evening",
+    "mustEnter": "You must enter a value",
+    "invalidMoney": "Not a valid money amount",
+    "nameHint": "Name shown on the list",
+    "name": "Name",
+    "maxBidPrice": "Max Bid Price",
+    "priceHint": "Your max bidding price",
+    "dataPackageType": "Data Package Type",
+    "typeHint": "Type of data",
+    "or": "OR",
+    "deviceLocation": "Device Location",
+    "deviceBehavior": "Device Behavior",
+    "idMapping": "ID Mapping"
+  }
+}

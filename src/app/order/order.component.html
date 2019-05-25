@@ -1,0 +1,45 @@
+<mat-card class="main-card">
+
+  <h1 class="section-title">{{'general.orderId' | translate}} {{orderId}}</h1>
+
+  <form #orderForm="ngForm" (ngSubmit)="onSubmit()">
+  <div fxLayout="row">
+    <mat-form-field appearance="outline">
+      <mat-label><b>{{'extra.name' | translate}}</b></mat-label>
+      <input matInput required [formControl]="nameField">
+      <mat-error *ngIf="nameField.invalid">{{getNameErrorMessage()}}</mat-error>
+      <mat-hint>{{'extra.nameHint' | translate}}</mat-hint>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field appearance="outline">
+      <mat-label><b>{{'extra.maxBidPrice' | translate}}</b></mat-label>
+      <input matInput required [formControl]="priceField">
+      <mat-error *ngIf="priceField.invalid">{{getPriceErrorMessage()}}</mat-error>
+      <mat-hint>{{'extra.priceHint' | translate}}</mat-hint>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field appearance="outline" class="select-field">
+      <mat-label><b>{{'extra.dataPackageType' | translate}}</b></mat-label>
+      <mat-select required [formControl]="typeField">
+        <mat-option value="Device Location">{{'extra.deviceLocation' | translate}}</mat-option>
+        <mat-option value="Device Behavior">{{'extra.deviceBehavior' | translate}}</mat-option>
+        <mat-option value="ID Mapping">{{'extra.idMapping' | translate}}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="typeField.invalid">{{getTypeErrorMessage()}}</mat-error>
+      <mat-hint>{{'extra.typeHint' | translate}}</mat-hint>
+    </mat-form-field>
+  </div>
+
+  <div fxLayout="row" class="text-center">
+    <button type="submit" mat-raised-button class="main-button-on-card">
+      {{'general.save' | translate}}
+    </button>
+    &nbsp;&nbsp; {{'extra.or' | translate}} &nbsp;&nbsp;
+    <button mat-raised-button class="main-button-on-card" routerLink="/dashboard">
+      {{'general.cancel' | translate}}
+    </button>
+  </div>
+  </form>
+</mat-card>

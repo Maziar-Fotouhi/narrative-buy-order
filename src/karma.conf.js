@@ -15,12 +15,23 @@ module.exports = function (config) {
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
+    mime: {
+      'text/x-typescript': ['ts', 'tsx']
+    },
+    browserConsoleLogOptions: {
+      level: 'log',
+      format: '%b %T: %m',
+      terminal: true
+    },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, '../coverage/narrative-buy-order'),
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
     },
-    reporters: ['progress', 'kjhtml'],
+    junitReporter: {
+      outputFile: 'karma-results.xml'
+    },
+    reporters: ['progress', 'kjhtml', 'dots', 'coverage-istanbul'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

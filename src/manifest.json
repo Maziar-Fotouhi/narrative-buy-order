@@ -1,0 +1,15 @@
+{
+  "name": "Narrative Buy Order",
+  "short_name": "NarBor",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "./assets/favicon.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#f0f0f0",
+  "theme_color": "#0032e6"
+}

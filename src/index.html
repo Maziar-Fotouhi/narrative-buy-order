@@ -1,14 +1,42 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <title>NarrativeBuyOrder</title>
+
   <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!--  PWA manifest reference-->
+  <link rel="manifest" href="manifest.json">
+
+  <!--  The entry point of stylings-->
+  <link href="styles.scss" rel="stylesheet">
+
+  <!--  Importing md icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--  Importing jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!--  Setting the favicon-->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- un-comment this code to enable service worker
+   <script>
+     if ('serviceWorker' in navigator) {
+       navigator.serviceWorker.register('service-worker.js')
+         .then(() => console.log('service worker installed'))
+         .catch(err => console.log('Error', err));
+     }
+   </script>-->
+
+  <!--  Extra device specific properties-->
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
 </head>
 <body>
-  <app-root></app-root>
+<narrative-app-root></narrative-app-root>
 </body>
 </html>

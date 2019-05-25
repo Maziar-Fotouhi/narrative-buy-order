@@ -1,0 +1,17 @@
+footer {
+  padding: 16px;
+  color: white;
+  background: #0032e6;
+  margin-top: 2em;
+  position: sticky;
+  top: 100%;
+  .copyright {
+    margin: 1em 0 1em;
+    font-size: 1.2em;
+  }
+}
+
+.footer-xs {
+  text-align: center;
+  padding-top: 1em;
+}

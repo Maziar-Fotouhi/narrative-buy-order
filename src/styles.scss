@@ -1,0 +1,60 @@
+// You can add global styles to this file, and also import other style files
+
+
+// Pre-built md theme imported
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+a, .cp {
+  cursor: pointer;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 200;
+  padding: 1em 0 0;
+  color: white;
+}
+
+.mat-menu-item, .mat-menu-item .mat-icon, .link {
+  color: white;
+  font-weight: 100;
+}
+
+.text-center {
+  text-align: -webkit-center;
+}
+
+.text-right {
+  text-align: -webkit-right;
+}
+
+.text-left {
+  text-align: -webkit-left;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+.cdk-overlay-pane, .mat-menu-panel {
+  background: #0032e6;
+  color: white;
+}
+
+.main-card {
+  margin-bottom: 20px;
+}
+
+.main-button-on-card {
+  background: slategray;
+  font-size: 1.1em;
+}

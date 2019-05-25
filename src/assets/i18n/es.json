@@ -1,0 +1,32 @@
+{
+  "general": {
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "remove": "Retirar",
+    "edit": "Editar",
+    "applicationName": "Narrative Solicitud De Pedido De Compra POC",
+    "copyright": "Copyright 2019",
+    "error": "Oops! Algo salió mal. Por favor, vaya al panel de control.",
+    "dashboard": "Tablero",
+    "addNewOrder": "Añadir nuevo pedido",
+    "orderId": "Solicitar ID: "
+  },
+  "extra": {
+    "otherLang": "English",
+    "greet1": "Buenos Días",
+    "greet2": "Buenas Tardes",
+    "greet3": "Buenas Noches",
+    "mustEnter": "Debes introducir un valor",
+    "invalidMoney": "No es una cantidad de dinero válida",
+    "nameHint": "Nombre que se muestra en la lista",
+    "name": "Nombre",
+    "maxBidPrice": "Precio máximo de puja",
+    "priceHint": "Su precio máximo de puja",
+    "dataPackageType": "Tipo de paquete de datos",
+    "typeHint": "Tipo de datos",
+    "or": "O",
+    "deviceLocation": "Ubicación del dispositivo",
+    "deviceBehavior": "Comportamiento del dispositivo",
+    "idMapping": "Mapeo de ID"
+  }
+}

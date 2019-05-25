@@ -1,0 +1,61 @@
+<mat-card class="welcome-card">
+  <h1 class="section-title">{{greeting | translate}}</h1>
+</mat-card>
+
+<mat-card class="main-card">
+  <div fxLayout="row" class="text-center">
+
+
+    <a mat-raised-button routerLink="/order" class="main-button-on-card">
+      {{'general.addNewOrder' | translate}}
+    </a>
+
+    <table #table mat-table [dataSource]='ordersArray' matSort>
+
+      <!--Name column-->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+        <td mat-cell *matCellDef="let order"> {{order.name}} </td>
+      </ng-container>
+
+      <!--MaxBidPrice column-->
+      <ng-container matColumnDef="maxBidPrice">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Max Bid Price</th>
+        <td mat-cell *matCellDef="let order"> {{order.maxBidPrice}} </td>
+      </ng-container>
+
+      <!--DataPackageType column-->
+      <ng-container matColumnDef="dataPackageType">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Data Package Type</th>
+        <td mat-cell *matCellDef="let order"> {{order.dataPackageType}} </td>
+      </ng-container>
+
+      <!-- Options Column -->
+      <ng-container matColumnDef="options" stickyEnd>
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let order">
+          <button mat-icon-button [matMenuTriggerFor]="optionsmenu" [matMenuTriggerData]="{id: order.id}">
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <mat-menu #optionsmenu="matMenu">
+        <ng-template matMenuContent let-id="id">
+          <button mat-menu-item (click)="editOrder(id)">
+            <span>{{'general.edit' | translate}}</span>
+          </button>
+          <button mat-menu-item (click)="removeOrder(id)">
+            <span>{{'general.remove' | translate}}</span>
+          </button>
+        </ng-template>
+      </mat-menu>
+
+      <!--Row definitions-->
+      <tr mat-header-row *matHeaderRowDef="visibleColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let rowData; columns: visibleColumns"></tr>
+
+    </table>
+
+  </div>
+</mat-card>
